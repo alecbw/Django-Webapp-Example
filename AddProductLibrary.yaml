@@ -1,0 +1,53 @@
+
+
+- "model": "webapp.productlibrary"
+  "pk": 1
+  "fields":
+    "name": "Name1"
+    "description": "Description1"
+    "category": "Category1"
+    "development_status": "Production"
+    "pricing": 0
+    "allowed_keys": 2
+    "total_calls": 0
+    "created_at": "2018-08-10 06:55:15.891468+00"
+    "used_last": "2018-08-10 06:55:15.891468+00"
+- "model": "webapp.productlibrary"
+  "pk": 2
+  "fields":
+    "name": "Name2"
+    "description": "Description2"
+    "category": "Category1"
+    "development_status": "Stable Alpha"
+    "pricing": 0
+    "allowed_keys": 2
+    "total_calls": 0
+    "created_at": "2018-08-10 06:55:15.891468+00"
+    "used_last": "2018-08-10 06:55:15.891468+00"
+- "model": "webapp.productlibrary"
+  "pk": 3
+  "fields":
+    "name": "Name3"
+    "description": "Description3"
+    "category": "Category2"
+    "development_status": "Testing"
+    "pricing": 0
+    "allowed_keys": 2
+    "total_calls": 0
+    "created_at": "2018-08-10 06:55:15.891468+00"
+    "used_last": "2018-08-10 06:55:15.891468+00"
+- "model": "webapp.productlibrary"
+  "pk": 4
+  "fields":
+    "name": "Name4"
+    "description": "Description4"
+    "category": "Category3"
+    "development_status": "Pre-Alpha"
+    "pricing": 0
+    "allowed_keys": 2
+    "total_calls": 0
+    "created_at": "2018-08-10 06:55:15.891468+00"
+    "used_last": "2018-08-10 06:55:15.891468+00"
+
+
+

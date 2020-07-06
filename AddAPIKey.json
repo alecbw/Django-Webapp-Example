@@ -1,0 +1,62 @@
+[
+  {
+    "model": "webapp.apikey",
+    "pk": 5,
+    "fields": {
+      "user" : 5,
+      "key_name" : "NAMETHEKEY",
+      "category" : "Superadmin",
+      "api_key" : "KEYGOESHERE",
+      "call_count" : 0,
+      "is_admin" : true,
+      "created_at" : "2018-08-09 21:45:53.148744+00",
+      "used_last" : "2018-08-09 21:45:53.148744+00",
+      "updated_at" : "2018-08-09 21:45:53.148744+00"
+    }
+  },
+  {
+    "model": "webapp.apikey",
+    "pk": 6,
+    "fields": {
+      "user" : 6,
+      "key_name" : "NAMETHEKEY",
+      "category" : "Internal_Testing",
+      "api_key" : "KEYGOESHERE",
+      "call_count" : 0,
+      "is_admin" : false,
+      "created_at" : "2018-08-09 21:45:53.148744+00",
+      "used_last" : "2018-08-09 21:45:53.148744+00",
+      "updated_at" : "2018-08-09 21:45:53.148744+00"
+    }
+  },
+  {
+    "model": "webapp.apikey",
+    "pk": 7,
+    "fields": {
+      "user" : 7,
+      "key_name" : "NAMETHEKEY",
+      "category" : "Customer",
+      "api_key" : "KEYGOESHERE",
+      "call_count" : 0,
+      "is_admin" : false,
+      "created_at" : "2018-08-09 21:45:53.148744+00",
+      "used_last" : "2018-08-09 21:45:53.148744+00",
+      "updated_at" : "2018-08-09 21:45:53.148744+00"
+    }
+  },
+  {
+    "model": "webapp.apikey",
+    "pk": 8,
+    "fields": {
+      "user" : 8,
+      "key_name" : "NAMETHEKEY",
+      "category" : "Customer_Testing",
+      "api_key" : "KEYGOESHERE",
+      "call_count" : 0,
+      "is_admin" : false,
+      "created_at" : "2018-08-09 21:45:53.148744+00",
+      "used_last" : "2018-08-09 21:45:53.148744+00",
+      "updated_at" : "2018-08-09 21:45:53.148744+00"
+    }
+  }
+]

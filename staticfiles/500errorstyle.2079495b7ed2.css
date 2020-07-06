@@ -1,0 +1,120 @@
+@color-primary: #30A9DE;
+@color-secondary: #30A9DE;
+@color-tertiary: #30A9DE;
+@color-primary-light: #6AAFE6;
+@color-primary-dark: #8EC0E4;
+@Distance: 1000px;
+
+body{
+  overflow: hidden;
+}
+
+html, body {
+  position: relative;
+  background: #D4DFE6 ;
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #274c5e;
+}
+
+.Container {
+  text-align: center;
+  position: relative;
+}
+
+.MainTitle {
+  display: block;
+  font-size: 2rem;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.MainDescription {
+  max-width: 50%;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.MainGraphic {
+  position: relative;
+}
+
+.Cog {
+  width: 10rem;
+  height: 10rem;
+  fill: @color-primary-light;
+  transition: easeInOutQuint();
+  animation: CogAnimation 5s infinite;
+}
+
+.Spanner {
+  position: absolute;
+  transform: rotate(20deg);
+  top: 10%;
+  left: 20%;
+  width: 10rem;
+  height: 10rem;
+  fill: @color-primary-dark;
+  animation: SpannerAnimation 4s infinite;
+}
+
+.Hummingbird{
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  fill: @color-primary;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@keyframes CogAnimation {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes SpannerAnimation {
+    0%   {
+      transform:
+        translate3d(20px, 20px,1px)
+        rotate(0deg);
+    }
+    10% {
+      transform:
+        translate3d(-@Distance, @Distance, 1px)
+        rotate(180deg);
+    }
+    15% {
+      transform:
+        translate3d(-@Distance, @Distance, 1px)
+        rotate(360deg);
+    }
+    20% {
+      transform:
+        translate3d(@Distance, -@Distance, 1px)
+        rotate(180deg);
+    }
+    30% {
+      transform:
+        translate3d(-@Distance, @Distance, 1px)
+        rotate(360deg);
+    }
+    40% {
+      transform:
+        translate3d(@Distance, -@Distance, 1px)
+        rotate(360deg);
+    }
+    50% {
+      transform:
+        translate3d(-@Distance, @Distance, 1px)
+        rotate(180deg);
+    }
+    100% {
+      transform:
+        translate3d(0, 0px, 0px)
+        rotate(360deg);
+    }
+}

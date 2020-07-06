@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/static/horizontalstyle.css" type="text/css">
+
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<div class="BigOlContaniner">
+  <div class="StillPrettyBigContainer">
+
+    <h3>{{ product_name }}</h3>
+    <h4>{{ FYI }}</h4>
+
+    <table class="horizontalTable">
+      <thead>
+      {% for header in headers %}
+        <th>{{ header }} </th>
+      {% endfor %}
+      </thead>
+
+      {% for table_dict in table_list %}
+        <tr>
+        {% for key, value in table_dict.items %}
+          <td>{{ value | safe }}</td>
+        {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+
+  </div>
+</div>
+
+{% endblock %}
+

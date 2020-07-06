@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="/static/genericform.css" type="text/css">
+
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="BigOlContaniner">
+  <div class="StillPrettyBigContainer">
+
+    <h3>{{ product_name }}</h3>
+    <h4>{{ FYI }}</h4>
+
+
+    <form action={{ submit_url }} method="POST" class=genericForm>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button style="height:30px;width:90" type="submit">{{ button_text }}</button>
+    </form>
+
+
+    {% if upload_enabled %}
+    <br>
+    <strong>Or upload a csv/xlsx below</strong>
+    <br>
+    <br>
+      <form method="post" enctype="multipart/form-data" class=genericUpload>
+        {% csrf_token %}
+        <input type="file" name="myfile">
+        <br>
+        <button style="height:30px;width:90" type="submit">Upload</button>
+      </form>
+    {% endif %}
+
+    {% if raw_html %}
+      <table class="verticalTable">
+        {% for key, value in raw_html.items %}
+          <tr>
+            <th>{{ key }}</th>
+            <td>{{ value }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+
+    {% endif %}
+
+    {% if table_dict %}
+      <hr>
+      <table class="verticalTable">
+        {% for key, value in table_dict.items %}
+          <tr>
+            <th>{{ key | safe }}</th>
+            <td>{{ value | safe }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+
+    {% if table_dol %}
+      <hr>
+      <table class="verticalTable">
+        {% if header_row %}
+          <tr>
+            <th></th>
+            {% for val in header_row %}
+              <th>{{ val | safe }}</th>
+            {% endfor %}
+          </tr>
+        {% endif %}
+
+        {% for key, value in table_dol.items %}
+          <tr>
+            <th>{{ key | safe }}</th>
+
+            {% for val in value %}
+              {% if loop.index == 1 %}
+                <th>{{ val | safe }}</th>
+              {% endif %}
+              <td>{{ val | safe }}</td>
+            {% endfor %}
+
+          </tr>
+        {% endfor %}
+      </table>
+    {% endif %}
+
+    {% endblock %}
+
+  </div>
+</div>

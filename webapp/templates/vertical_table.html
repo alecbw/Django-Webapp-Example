@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/static/verticalstyle.css" type="text/css">
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="BigOlContaniner">
+  <div class="StillPrettyBigContainer">
+
+    <h3>{{ product_name }}</h3>
+    <h4>{{ FYI }}</h4>
+
+    <table class="verticalTable">
+
+        {% for key, value in table_dict.items %}
+        <tr>
+          <th>{{ key }}</th>
+          <td>{{ value | safe }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    {% if table_dict_2 %}
+      <br>
+      <h4>{{ FYI_2 }}</h4>
+      <table class="verticalTable">
+        {% for key, value in table_dict_2.items %}
+          {% if values_are_lists %}
+            <tr>
+              <th>{{ key }}</th>
+              {% for val in value %}
+                <td>{{ val | safe }}</td>
+              {% endfor %}
+            </tr>
+
+          {% else %}
+            <tr>
+              <th>{{ key }}</th>
+              <td>{{ value | safe }}</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </table>
+
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}
+
